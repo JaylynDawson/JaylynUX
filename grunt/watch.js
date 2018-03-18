@@ -1,12 +1,14 @@
 module.exports = {
+	options: {
+		livereload: true
+    },
     hbs: {
         files: [
             'src/**/*.hbs'
         ],
         tasks: [
             'assemble:build'
-        ],
-        spawn: false
+        ]
     },
     less: {
         files: [
@@ -14,7 +16,6 @@ module.exports = {
         ],
         tasks: [
             'less'
-        ],
-        spawn: false
+        ]
     }
 }

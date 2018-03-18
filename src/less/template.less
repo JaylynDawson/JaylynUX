@@ -1,13 +1,60 @@
-@top-nav__bg: blue;
+// Global Colors
+// ==================
+@color1: blue; // Primary color
+@color2: white; // Secondary color
+
+@site-bg: white;
+@content-area-bg: white;
+
+@color1-dark: darken(@color1, 10%);
+@color2-dark: darken(@color2, 10%);
+
+@color1-light: lighten(@color1, 10%);
+@color2-light: lighten(@color2, 10%);
+
+
+// Global Classes
+// ==================
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	&-align-items {
+		align-items: center;
+	}
+	&-justify-content {
+		&-center {
+			justify-content: center;
+		}
+	}
+}
+
+
+// Global Styling
+// ==================
+body {
+	background-color: @site-bg;
+}
+#content_area {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: @content-area-bg;
+}
+
+
+// Nav Menu
+// ==================
+@top-nav__bg: @color1;
 @top-nav__color: contrast(@top-nav__bg);
-@top-nav--hover__bg: red;
+@top-nav--hover__bg: @color2;
 @top-nav--hover__color: contrast(@top-nav--hover__bg);
 
 
+.main-menu {
+	background-color: @top-nav__bg;
+	color: @top-nav__color;
+}
 .nav {
-	&&--top {
-		background-color: @top-nav__bg;
-		color: @top-nav__color;
+	&--top {
 		.nav__item {
 			&:hover {
 				background-color: @top-nav--hover__bg;
@@ -18,6 +65,32 @@
 				background-color: inherit;
 				color: inherit;
 			}
+		}
+	}
+	&__item {
+	    transition: 0.3s linear;
+	}
+}
+
+
+// Footer
+// ==================
+
+#footer {
+	border-top: 1px solid contrast(@content-area-bg);
+}
+
+// Project Highlights
+// ==================
+.project-highlight {
+	.project-thumbnail {
+		padding-right: 15px;
+		padding-bottom: 15px;
+	}
+	.additional-thumbnails {
+		.additional-thumbnail--wrapper {
+			max-width: 25%;
+			padding: 15px;
 		}
 	}
 }

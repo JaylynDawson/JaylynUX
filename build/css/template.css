@@ -1,13 +1,45 @@
-.nav.nav--top {
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-align-items {
+  align-items: center;
+}
+.flex-justify-content-center {
+  justify-content: center;
+}
+body {
+  background-color: white;
+}
+#content_area {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+}
+.main-menu {
   background-color: blue;
   color: #ffffff;
 }
-.nav.nav--top .nav__item:hover {
-  background-color: red;
-  color: #ffffff;
+.nav--top .nav__item:hover {
+  background-color: white;
+  color: #000000;
 }
-.nav.nav--top .nav__item > a {
+.nav--top .nav__item > a {
   display: block;
   background-color: inherit;
   color: inherit;
+}
+.nav__item {
+  transition: 0.3s linear;
+}
+#footer {
+  border-top: 1px solid #000000;
+}
+.project-highlight .project-thumbnail {
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.project-highlight .additional-thumbnails .additional-thumbnail--wrapper {
+  max-width: 25%;
+  padding: 15px;
 }
