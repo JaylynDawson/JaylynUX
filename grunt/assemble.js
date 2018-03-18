@@ -9,12 +9,8 @@ module.exports = {
         }
     },
     build: {
-        options: {
-            layout: 'src/hbs/layouts/template.hbs',
-            partials: ['src/hbs/partials/**/*.hbs'],
-        },
         files: {
-            'build/pages/': 'src/hbs/content/**/*.hbs'
+            'build/': 'src/hbs/content/**/*.hbs'
         }
     }
 };

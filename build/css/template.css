@@ -1,0 +1,13 @@
+.nav.nav--top {
+  background-color: blue;
+  color: #ffffff;
+}
+.nav.nav--top .nav__item:hover {
+  background-color: red;
+  color: #ffffff;
+}
+.nav.nav--top .nav__item > a {
+  display: block;
+  background-color: inherit;
+  color: inherit;
+}

@@ -1,24 +1,20 @@
 module.exports = {
-    scripts: {
+    hbs: {
         files: [
-            '**/*.hbs',
-            '**/*.js',
-            '**/*.less'
+            'src/**/*.hbs'
         ],
-        tasks: ['jshint'],
-        options: {
-            spawn: false,
-        },
+        tasks: [
+            'assemble:build'
+        ],
+        spawn: false
     },
     less: {
-        // We watch and compile sass files as normal but don't live reload here
-        files: ['src/template/less/*.less'],
-        tasks: ['less'],
-    },
-    livereload: {
-        // Here we watch the files the sass task will compile to
-        // These files are sent to the live reload server after sass compiles to them
-        options: { livereload: true },
-        files: ['dest/**/*'],
+        files: [
+            'src/**/*.less'
+        ],
+        tasks: [
+            'less'
+        ],
+        spawn: false
     }
 }

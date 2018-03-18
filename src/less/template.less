@@ -1,0 +1,23 @@
+@top-nav__bg: blue;
+@top-nav__color: contrast(@top-nav__bg);
+@top-nav--hover__bg: red;
+@top-nav--hover__color: contrast(@top-nav--hover__bg);
+
+
+.nav {
+	&&--top {
+		background-color: @top-nav__bg;
+		color: @top-nav__color;
+		.nav__item {
+			&:hover {
+				background-color: @top-nav--hover__bg;
+				color: @top-nav--hover__color;
+			}
+			> a {
+				display: block;
+				background-color: inherit;
+				color: inherit;
+			}
+		}
+	}
+}
