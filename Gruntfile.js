@@ -16,9 +16,15 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:all_build',
         'assemble',
-        'less'
+        'copy:js',
+        'less',
+        'postcss'
     ]);
     grunt.registerTask('dist', [
-        'clean:all_dist'
+        'clean:all_dist',
+        'assemble',
+        'processhtml',
+        'copy:js',
+        'copy:css'
     ]);
 }

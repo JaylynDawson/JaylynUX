@@ -4,7 +4,7 @@ module.exports = {
     },
     hbs: {
         files: [
-            'src/**/*.hbs'
+            'src/hbs/**/*.hbs'
         ],
         tasks: [
             'assemble:build'
@@ -12,10 +12,16 @@ module.exports = {
     },
     less: {
         files: [
-            'src/**/*.less'
+            'src/less/**/*.less'
         ],
         tasks: [
             'less'
+        ]
+    },
+    js: {
+        files: 'src/js/**/*.js',
+        tasks: [
+            'copy:js'
         ]
     }
 }
