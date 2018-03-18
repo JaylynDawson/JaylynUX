@@ -13,59 +13,64 @@
 		<p>{{{brief-summary}}}</p>
 	</div>
 	{{/if}}
-	<button class="btn-primary">Ready More <i class="glyphicon glyphicon-chevron-down"></i></button>
-	{{#if challenges}}
-	<div class="challenges">
-		<h4>Challenges</h4>
-		<p>{{{challenges}}}</p>
-	</div>
-	{{/if}}
-	{{#if team-and-process}}
-	<div class="team-and-process">
-		<h4>Team and Process</h4>
-		<p>{{{team-and-process}}}</p>
-	</div>
-	{{/if}}
-	{{#if research-and-validation}}
-	<div class="research-and-validation">
-		<h4>Research and Validation</h4>
-		<p>{{{research-and-validation}}}</p>
-	</div>
-	{{/if}}
-	{{#if outcome}}
-	<div class="outcome">
-		<h4>Outcome</h4>
-		<p>{{{outcome}}}</p>
-	</div>
-	{{/if}}
-	{{#or additional-thumbnail-01-src additional-thumbnail-02-src additional-thumbnail-03-src additional-thumbnail-04-src}}
-	<div class="additional-thumbnails">
-		<div class="row">
-			<div class="flex">
-				{{#if additional-thumbnail-01-src}}
-				<div class="additional-thumbnail--wrapper">
-					<img class="img-responsive" src="{{additional-thumbnail-01-src}}" alt="{{title}}">
-				</div>
-				{{/if}}
-				{{#if additional-thumbnail-02-src}}
-				<div class="additional-thumbnail--wrapper">
-					<img class="img-responsive" src="{{additional-thumbnail-02-src}}" alt="{{title}}">
-				</div>
-				{{/if}}
-				{{#if additional-thumbnail-03-src}}
-				<div class="additional-thumbnail--wrapper">
-					<img class="img-responsive" src="{{additional-thumbnail-03-src}}" alt="{{title}}">
-				</div>
-				{{/if}}
-				{{#if additional-thumbnail-04-src}}
-				<div class="additional-thumbnail--wrapper">
-					<img class="img-responsive" src="{{additional-thumbnail-04-src}}" alt="{{title}}">
-				</div>
-				{{/if}}
+	<div id="{{hyphenate title}}" class="collapse">
+  		<div class="well">
+			{{#if challenges}}
+			<div class="challenges">
+				<h4>Challenges</h4>
+				<p>{{{challenges}}}</p>
 			</div>
+			{{/if}}
+			{{#if team-and-process}}
+			<div class="team-and-process">
+				<h4>Team and Process</h4>
+				<p>{{{team-and-process}}}</p>
+			</div>
+			{{/if}}
+			{{#if research-and-validation}}
+			<div class="research-and-validation">
+				<h4>Research and Validation</h4>
+				<p>{{{research-and-validation}}}</p>
+			</div>
+			{{/if}}
+			{{#if outcome}}
+			<div class="outcome">
+				<h4>Outcome</h4>
+				<p>{{{outcome}}}</p>
+			</div>
+			{{/if}}
+			{{#or additional-thumbnail-01-src additional-thumbnail-02-src additional-thumbnail-03-src additional-thumbnail-04-src}}
+			<div class="additional-thumbnails">
+				<div class="row">
+					<div class="flex">
+						{{#if additional-thumbnail-01-src}}
+						<div class="additional-thumbnail--wrapper">
+							<img class="img-responsive" src="{{additional-thumbnail-01-src}}" alt="{{title}}">
+						</div>
+						{{/if}}
+						{{#if additional-thumbnail-02-src}}
+						<div class="additional-thumbnail--wrapper">
+							<img class="img-responsive" src="{{additional-thumbnail-02-src}}" alt="{{title}}">
+						</div>
+						{{/if}}
+						{{#if additional-thumbnail-03-src}}
+						<div class="additional-thumbnail--wrapper">
+							<img class="img-responsive" src="{{additional-thumbnail-03-src}}" alt="{{title}}">
+						</div>
+						{{/if}}
+						{{#if additional-thumbnail-04-src}}
+						<div class="additional-thumbnail--wrapper">
+							<img class="img-responsive" src="{{additional-thumbnail-04-src}}" alt="{{title}}">
+						</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+			{{/or}}
 		</div>
-	</div>
-	{{/or}}
-
-	<button class="btn-primary">Ready Less <i class="glyphicon glyphicon-chevron-up"></i></button>
+	</div> {{!-- end collapsable --}}
+	<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#{{hyphenate title}}" aria-expanded="false" aria-controls="{{hyphenate title}}">
+		<span class="read-more">Ready More <i class="glyphicon glyphicon-chevron-down"></i></span>
+		<span class="read-less">Ready Less <i class="glyphicon glyphicon-chevron-up"></i></span>
+	</button>
 </section>

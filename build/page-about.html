@@ -2,15 +2,24 @@
 <html class="">
 	<head>
 		<title>About</title>
-		<link rel="stylesheet" href="/css/template.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/></script>
+
+		<link rel="stylesheet" href="/css/template.css">
+		<script src="/js/template.js"/></script>
 	</head>
 	<body>
 		<header id="header">
 			<div class="container">
 				<div class="row">
 					<div class="logo text-center">
+						<!-- build:template:dist
 						<a href="/" rel="nofollow">
+						/build -->
+						<!-- build:remove:dist -->
+						<a href="/page-about.html" rel="nofollow">
+						<!-- /build -->
 							<h2>Jaylyn Dawson</h2>
 							<h4>UX Designer</h4>
 						</a>
@@ -21,14 +30,14 @@
 					<div class="row">
 						<nav class="nav col-xs-12">
 							<ul class="nav list-unstyled nav--top nav--level1 flex flex-justify-content-center flex-align-items-center">
-								<li class="nav__item">
-						        	<a href="page-about.html" class=" nav__link--active nav__link">About</a>
+								<li class="nav__item  nav__item--active">
+						        	<a href="page-about.html" class="nav__link">About</a>
 								</li>
-								<li class="nav__item">
-						        	<a href="page-project-highlights.html" class=" nav__link">Project Highlights</a>
+								<li class="nav__item ">
+						        	<a href="page-project-highlights.html" class="nav__link">Project Highlights</a>
 								</li>
-								<li class="nav__item">
-						        	<a href="page-resume.html" class=" nav__link">Resume</a>
+								<li class="nav__item ">
+						        	<a href="page-resume.html" class="nav__link">Resume</a>
 								</li>
 							</ul>
 						</nav>
@@ -39,64 +48,63 @@
 				<div class="row">
 					<div id="content_area" class="col-xs-12">
 						
+<section class="about">
+	<h3>Catchy Title</h3>
+	<p>
+		Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt.
+	</p>
+	<p>
+		Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+	</p>
+	<p>
+		Donec sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+	</p>
+</section>
+
 <section class="skills">
 	<h3>Skills</h3>
 	<div class="flex">
-		<div class="col-xs-12 col-sm-2 col-md-3">
-			<h4>Research</h4>
+		<div class="col-xs-12 col-sm-4">
+			<h4>UX Research</h4>
 			<ul>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
+				<li>Interviewing</li>
+				<li>Observing</li>
+				<li>Surveying</li>
+				<li>Persona Creation</li>
+				<li>Presenting Findings</li>
+				
+				
+				
+				
+				
 			</ul>		</div>
-		<div class="col-xs-12 col-sm-2 col-md-3">
-			<h4>Analysis</h4>
+		<div class="col-xs-12 col-sm-4">
+			<h4>UI Design</h4>
 			<ul>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
+				<li>Sketching</li>
+				<li>Wireframing</li>
+				<li>Prototyping</li>
+				<li>Collaboration</li>
+				<li>Style Guides</li>
+				<li>Specifications</li>
+				
+				
+				
+				
 			</ul>		</div>
-		<div class="col-xs-12 col-sm-2 col-md-3">
-			<h4>Design</h4>
+		<div class="col-xs-12 col-sm-4">
+			<h4>Web Development</h4>
 			<ul>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-			</ul>		</div>
-		<div class="col-xs-12 col-sm-2 col-md-3">
-			<h4>Delivery</h4>
-			<ul>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
-				<li>___________</li>
+				<li>Responsive Design</li>
+				<li>Troubleshooting</li>
+				<li>Modifying Existing Code</li>
+				<li>QA Testing</li>
+				
+				
+				
+				
+				
+				
 			</ul>		</div>
 	</div>
 </section>
@@ -104,17 +112,13 @@
 	<h3>Tools</h3>
 	<div class="flex flex-justify-content-center">
 		<span>Axure</span>
-		<span>&bullet;</span>
-		<span>Adobe XD</span>
-		<span>&bullet;</span>
 		<span>Sketch</span>
-		<span>&bullet;</span>
+		<span>Adobe XD</span>
 		<span>Flinto</span>
-		<span>&bullet;</span>
-		<span>HTML/CSS</span>
-		<span>&bullet;</span>
-		<span>Illustrator</span>
-		<span>&bullet;</span>
+		<span>Sublime 3</span>
+		<span>Adobe Creative Suite</span>
+		<span>Microsoft Office</span>
+		<span>SharePoint Designer</span>
 	</div>
 </section>
 					</div>
@@ -123,6 +127,5 @@
 		</div>
 		<footer id="footer" class="text-center">
 			Disclaimer text
-		</footer>		<script src="/js/template.js"/>
-	</body>
+		</footer>	</body>
 </html>

@@ -1,16 +1,29 @@
 // Global Colors
 // ==================
-@color1: blue; // Primary color
-@color2: white; // Secondary color
+@color1: #2f6a6a; // Primary color
+@color2: #75B0A0; // Secondary color
 
-@site-bg: white;
-@content-area-bg: white;
+@site-bg: @white;
+@content-area-bg: @white;
+
+@color1-light: lighten(@color1, 10%);
+@color2-light: lighten(@color2, 10%);
+
 
 @color1-dark: darken(@color1, 10%);
 @color2-dark: darken(@color2, 10%);
 
-@color1-light: lighten(@color1, 10%);
-@color2-light: lighten(@color2, 10%);
+
+
+@grey: #c0bfbf;
+@white: #fff;
+@black: #000;
+
+
+@font1: 'Roboto', sans-serif;
+@font2: 'Volkhov', serif;
+@import url('//fonts.googleapis.com/css?family=Volkhov:400,400i,700|Roboto:300,300i,400,400i,500,700');
+
 
 
 // Global Classes
@@ -33,6 +46,17 @@
 // ==================
 body {
 	background-color: @site-bg;
+	font-family: @font1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @font2;
 }
 #content_area {
 	padding-top: 15px;
@@ -40,35 +64,101 @@ body {
 	background-color: @content-area-bg;
 }
 
+@link__color: @color1;
+@link__color--hover: contrast(@link__color, darken(@link__color, 10%), lighten(@link__color, 10%));
+a {
+	color: @link__color;
+	&:hover {
+		color: @link__color--hover;
+	}
+}
 
+
+
+@btn-primary__background: @color1;
+@btn-primary__color: contrast(@btn-primary__background);
+@btn-primary__border-color: contrast(@btn-primary__background, darken(@btn-primary__background, 10%), lighten(@btn-primary__background, 10%));
+@btn-primary__background--hover: @color2;
+@btn-primary__color--hover: contrast(@btn-primary__background--hover);
+@btn-primary__border-color--hover: contrast(@btn-primary__background--hover, darken(@btn-primary__background--hover, 10%), lighten(@btn-primary__background--hover, 10%));
+
+@btn-default__background: @content-area-bg;
+@btn-default__color: contrast(@btn-default__background);
+@btn-default__border-color: contrast(@btn-default__background, darken(@btn-default__background, 10%), lighten(@btn-default__background, 10%));
+@btn-default__background--hover: contrast(@btn-default__background, #333, white);
+@btn-default__color--hover: contrast(@btn-default__background--hover);
+@btn-default__border-color--hover: contrast(@btn-default__background--hover, darken(@btn-default__background--hover, 10%), lighten(@btn-default__background--hover, 10%));
+
+.btn {
+	transition: 0.2s linear;
+	&.btn-primary {
+		background-color: @btn-primary__background;
+		color: @btn-primary__color;
+		border-color: @btn-primary__border-color;
+		&:hover{
+			background-color: @btn-primary__background--hover;
+			color: @btn-primary__color--hover;
+			border-color: @btn-primary__border-color--hover;
+		}
+	}
+	&.btn-default {
+		background-color: @btn-default__background;
+		color: @btn-default__color;
+		border-color: @btn-default__border-color;
+		&:hover{
+			background-color: @btn-default__background--hover;
+			color: @btn-default__color--hover;
+			border-color: @btn-default__border-color--hover;
+		}
+	}
+}
+
+
+
+
+.logo {
+	a {
+		color: @link__color;
+		text-decoration: none;
+		&:hover {
+			color: @link__color--hover;
+		}
+	}
+}
 // Nav Menu
 // ==================
 @top-nav__bg: @color1;
-@top-nav__color: contrast(@top-nav__bg);
+@top-nav__color: contrast(@top-nav__bg, @black, @white);
+@top-nav__font-size: 16px;
+@top-nav__font-weight: 500;
+
 @top-nav--hover__bg: @color2;
-@top-nav--hover__color: contrast(@top-nav--hover__bg);
+@top-nav--hover__color: contrast(@top-nav--hover__bg, @black, @white);
 
 
 .main-menu {
 	background-color: @top-nav__bg;
 	color: @top-nav__color;
-}
-.nav {
-	&--top {
-		.nav__item {
-			&:hover {
-				background-color: @top-nav--hover__bg;
-				color: @top-nav--hover__color;
-			}
-			> a {
-				display: block;
-				background-color: inherit;
-				color: inherit;
+	.nav {
+		&--top {
+			font-size: @top-nav__font-size;
+			font-weight: @top-nav__font-weight;
+			.nav__item {
+				&:hover,
+				&.nav__item--active {
+					background-color: @top-nav--hover__bg;
+					color: @top-nav--hover__color;
+				}
+				> a {
+					display: block;
+					background-color: inherit;
+					color: inherit;
+				}
 			}
 		}
-	}
-	&__item {
-	    transition: 0.3s linear;
+		&__item {
+		    transition: 0.3s linear;
+		}
 	}
 }
 
@@ -86,6 +176,18 @@ body {
 	.project-thumbnail {
 		padding-right: 15px;
 		padding-bottom: 15px;
+	}
+	button {
+		&.collapsed {
+			.read-less {
+				display: none;
+			}
+		}
+		&:not(.collapsed) {
+			.read-more {
+				display: none;
+			}
+		}
 	}
 	.additional-thumbnails {
 		.additional-thumbnail--wrapper {
